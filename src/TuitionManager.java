@@ -19,25 +19,29 @@ public class TuitionManager {
         stdin = new Scanner(System.in);
 
         //loop to accept inputs and do appropriate procedures
+        boolean loop = true;
         String command;
-        while(true){
-            command = stdin.next();
+        String[] inputLine;
+        while(loop == true){
+            inputLine = stdin.nextLine().split(" ",1);
+            command = inputLine[0];
             if(command.length()!=1){
                 handleBadCommands();
             }
             switch (command.charAt(0)){
                 //cases based on required inputs:
-                case 'I': addNewInstateStudent();
+                case 'I': addNewStudent('I',inputLine[1]);
                 break;
-                case 'O': addNewOutstateStudent();
+                case 'O': addNewStudent('O',inputLine[1]);
                 break;
-                case 'N': addNewInternationalStudent();
+                case 'N': addNewStudent('N',inputLine[1]);
                 break;
-                case 'R': removeStudent();
+                case 'R': removeStudent(inputLine[1]);
                 break;
                 case 'P': printCommand();
                 break;
                 case 'Q': System.out.println("Program Terminated");
+                          loop = false;
                 break;
                 default : handleBadCommands();
             }
@@ -47,43 +51,41 @@ public class TuitionManager {
 
 
     /**
-     Adds new Instate student to the running list in this class.
-     Corresponds to command 'I'.
+     Adds new student to the running list in this class.
 
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    private void addNewInstateStudent(){
+    private void addNewStudent(char studentType, String studentInfo){
+        //obtain student information, verify its proper for type of student
+        String[] studentDetails = studentInfo.split(" ");
+        Student newStudent = createNewStudentObject(studentType,studentDetails);
+        if(newStudent == null){
+            handleBadCommands();
+            return;
+        }
 
-        String[] studentInfo = stdin.nextLine().split(" ");
-        Student newInstateStudent = createNewStudentObj('I',studentInfo);
-
-        if(!(students.contains(newInstateStudent))){
-            students.add(newInstateStudent);
+        //add student to list
+        if(!(students.contains(newStudent))){
+            students.add(newStudent);
         }
         else{
-            System.out.println("Student already in the list");
+            System.out.println("Cannot Add Student Because Student already registered");
         }
     }
 
-
-    /**
-     Adds new Outstate student to the running list in this class.
-     Corresponds to command 'O'
-     @author Rizwan Chowdhury
-     */
-    private void addNewOutstateStudent(){
-
-    }
-
-
-    /**
-     Adds new International student to the running list in this class.
-     Corresponds to command 'N'
-     @author Rizwan Chowdhury
-     */
-    private void addNewInternationalStudent(){
-
+    private Student createNewStudentObject(char studentType, String[] studentDetails){
+        Student newStudent;
+        switch (studentType){
+            case 'I' : newStudent = new Instate(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Integer.parseInt(studentDetails[3]));
+                break;
+            case 'O' : newStudent = new Outstate(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Boolean.parseBoolean(studentDetails[3]));
+                break;
+            case 'N' : newStudent = new International(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Boolean.parseBoolean(studentDetails[3]));
+                break;
+            default: newStudent = null;
+        }
+        return newStudent;
     }
 
 
@@ -93,7 +95,7 @@ public class TuitionManager {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    private void removeStudent(){
+    private void removeStudent(String studentInfo){
 
     }
 
@@ -103,16 +105,6 @@ public class TuitionManager {
      */
     private void handleBadCommands(){
 
-    }
-
-
-    private Student createNewStudentObj(char studentType, String[] studentInfo){
-        switch (studentType){
-            case 'I': return new Instate(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Integer.parseInt(studentInfo[3]));
-            case 'O': return new Outstate(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Boolean.parseBoolean(studentInfo[3]));
-            case 'N': return new International(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Boolean.parseBoolean(studentInfo[3]));
-            default: return null;
-        }
     }
 
 
