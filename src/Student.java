@@ -42,7 +42,27 @@ public abstract class Student implements Comparable {
      */
     @Override
     public int compareTo(Object obj) {
-        return 0;
+    	if(!(obj instanceof Student)) {
+  		  return -1;
+  	  }
+  	  
+  	  //create Student obj for target
+    	Student target= (Student) obj;
+  	  
+  	  //check for fname and lname equality through string.equals():
+  	  if(!(this.fname.equals(target.fname))||!(this.lname.equals(target.lname))) {
+  		  return -1;
+  	  }
+  	  
+  	  //check for credit equality
+  	  if(this.credit!=target.credit) {
+  		  return -1;
+  	  }
+  		  
+  		  
+  	  
+  	  //at this point target member's name and date equals calling member's so they are equal
+  	  return 1;
     }
 
 
@@ -56,7 +76,7 @@ public abstract class Student implements Comparable {
      */
     @Override
     public String toString(){
-
+    	return this.fname+" "+this.lname+" Credit: "+this.credit;
     }
 
 
@@ -69,4 +89,6 @@ public abstract class Student implements Comparable {
      @author Tin Fung
      */
     public abstract  int tuitionDue();
+   
 }
+
