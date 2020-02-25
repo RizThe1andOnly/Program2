@@ -41,6 +41,24 @@ public class International extends Student {
     @Override
     public int tuitionDue() {
 
+    	int InternationalTuition=945;
+    	int Internationalfee=350;
+    	int full_time=1441;
+    	int part_time=846;
+    	int over_15=15;
+
+    	if(this.exchange) {
+    		return full_time+Internationalfee;
+    	}else {
+    		if(this.credit>=over_15) {
+        		return over_15*InternationalTuition+full_time;
+        	}else   if(this.credit>=12) {
+    		return this.credit*InternationalTuition+full_time+Internationalfee;
+    	}else {
+    		return this.credit*InternationalTuition+part_time+Internationalfee;
+    	}
+    	}
+    
     }
 
 
@@ -57,6 +75,13 @@ public class International extends Student {
      */
     @Override
     public String toString(){
+    	if(this.exchange) {
+        	return super.toString()+"\nInternational  Exchange: Yes\nTuition Due: "+this.tuitionDue();
+
+    	}else {
+        	return super.toString()+"\nInternational  Exchange: No\nTuition Due: "+this.tuitionDue();
+
+    	}
 
     }
 
@@ -68,6 +93,14 @@ public class International extends Student {
      @author Tin Fung
      */
     public static void main(String[] args){
+    	International test=new International ("Joe","Kim",12,true);
+    	test.tuitionDue();
+    	System.out.println(test.toString());
+    	
+    	International test2=new International ("David","Lee",12,false);
+    	test2.tuitionDue();
+    	System.out.println(test2.toString());
+
 
     }
 }
