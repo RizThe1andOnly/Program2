@@ -50,44 +50,123 @@ public class TuitionManager {
     }
 
 
-    /**
-     Adds new student to the running list in this class.
-
-     @author Rizwan Chowdhury
-     @author Tin Fung
-     */
     private void addNewStudent(char studentType, String studentInfo){
-        //obtain student information, verify its proper for type of student
-        String[] studentDetails = studentInfo.split(" ");
-        Student newStudent = createNewStudentObject(studentType,studentDetails);
-        if(newStudent == null){
-            handleBadCommands();
-            return;
-        }
 
-        //add student to list
-        if(!(students.contains(newStudent))){
-            students.add(newStudent);
-        }
-        else{
-            System.out.println("Cannot Add Student Because Student already registered");
-        }
     }
 
-    private Student createNewStudentObject(char studentType, String[] studentDetails){
-        Student newStudent;
-        switch (studentType){
-            case 'I' : newStudent = new Instate(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Integer.parseInt(studentDetails[3]));
-                break;
-            case 'O' : newStudent = new Outstate(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Boolean.parseBoolean(studentDetails[3]));
-                break;
-            case 'N' : newStudent = new International(studentDetails[0],studentDetails[1],Integer.parseInt(studentDetails[2]),Boolean.parseBoolean(studentDetails[3]));
-                break;
-            default: newStudent = null;
+
+    private boolean addNewInstateStudent(String[] studentInfo){
+        if(studentInfo.length != 4){
+            return false;
         }
-        return newStudent;
+
+        String firstName = studentInfo[0];
+        String lastName = studentInfo[1];
+        int credits;
+        int funds;
+        try {
+            credits = Integer.parseInt(studentInfo[2]);
+            funds = Integer.parseInt(studentInfo[3]);
+        }catch (NumberFormatException e){
+            return false;
+        }
+
+        Student newInstateStudent = new Instate(firstName,lastName,credits,funds);
+        if(!(students.contains(newInstateStudent))){
+            students.add(newInstateStudent);
+        }
+
+        System.out.print("Student already in students list. ");
+        return true;
     }
 
+
+    private boolean addNewOutstateStudent(String[] studentInfo){
+        if(studentInfo.length != 4){
+            return false;
+        }
+
+        String firstName = studentInfo[0];
+        String lastName = studentInfo[1];
+        int credits;
+        boolean tristate;
+
+        try {
+            credits = Integer.parseInt(studentInfo[2]);
+        }catch (NumberFormatException e){
+            return false;
+        }
+
+        switch (getBooleanValue(studentInfo[3])){
+            case 1: tristate = true;
+            break;
+            case 0: tristate = false;
+            break;
+            default: System.out.println("Bad Input: Value for tristate should be \"T\" or \"F\"");
+                     return false;
+        }
+
+        Student newOutstateStudent = new Outstate(firstName,lastName,credits,tristate);
+        if(!(students.contains(newOutstateStudent))){
+            students.add(newOutstateStudent);
+            return true;
+        }
+
+        System.out.print("Student already in students list. ");
+        return false;
+    }
+
+    private boolean addNewInternationalStudent(String[] studentInfo){
+        if(studentInfo.length != 4){
+            return false;
+        }
+
+        String firstName = studentInfo[0];
+        String lastName = studentInfo[1];
+        int credits;
+        boolean exchange;
+
+        try {
+            credits = Integer.parseInt(studentInfo[2]);
+            if(credits<9){
+                System.out.println("Not enough credits for an International Student");
+                return false;
+            }
+        }catch (NumberFormatException e){
+            return false;
+        }
+
+        switch (getBooleanValue(studentInfo[3])){
+            case 1: exchange = true;
+                break;
+            case 0: exchange = false;
+                break;
+            default: System.out.println("Bad Input: Value for exchange should be \"T\" or \"F\"");
+                return false;
+        }
+
+        Student newInternationalStudent = new International(firstName,lastName,credits,exchange);
+        if(!(students.contains(newInternationalStudent))){
+            students.add(newInternationalStudent);
+            return true;
+        }
+
+        System.out.print("Student already in students list. ");
+        return false;
+    }
+
+
+    private int getBooleanValue(String boolString){
+        if(boolString.equals("T")){
+            return 1;
+        }
+
+        if(boolString.equals("F")){
+            return 0;
+        }
+
+        return -1;
+    }
 
     /**
      Removes given student from the running list in this class
