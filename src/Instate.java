@@ -41,7 +41,18 @@ public class Instate extends Student {
      @author Tin Fung
      */
     public int tuitionDue(){
+    	int InStateTuition=433;
+    	int full_time=1441;
+    	int part_time=846;
+    	int over_15=15;
+    	if(this.credit>=over_15) {
+    		return over_15*InStateTuition+full_time-this.funds;
 
+    	}else if(this.credit>=12) {
+    		return this.credit*InStateTuition+full_time-this.funds;
+    	}else {
+    		return this.credit*InStateTuition+part_time;
+    	}
     }
 
 
@@ -59,7 +70,7 @@ public class Instate extends Student {
      */
     @Override
     public String toString(){
-
+    	return super.toString()+"\nInstate Funds: "+this.funds+"\nTuition Due: "+this.tuitionDue();
     }
 
 
@@ -69,7 +80,12 @@ public class Instate extends Student {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    public static void main(String[] args){
+    public static void main(String[] args){ 
+    	
+    	Instate test=new Instate ("John","white",12,1000);
+    	test.tuitionDue();
+    	System.out.println(test.toString());
+
 
     }
 }
