@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,17 +56,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="368" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582397792133" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582577494496">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582614139179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582577494496" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582614139179" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1582397647036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1582397647036" />
-    <state x="687" y="49" key="search.everywhere.popup" timestamp="1582395316517">
+    <state x="687" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582619287200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="687" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582395316517" />
+    <state x="687" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582619287200" />
   </component>
 </project>

@@ -33,7 +33,7 @@ public abstract class Student implements Comparable {
 
     /**
      Compares two Student objects to check if they are the same student or different.
-     This method will compare the names and credit being taken for the two students.
+     This method will compare the names of the two students.
 
      @param obj Student object passed as argument to be compared to the caller of method
      @return 0 if the Student objects equal each other (same student), -1 if they are unequal(different students)
@@ -42,27 +42,23 @@ public abstract class Student implements Comparable {
      */
     @Override
     public int compareTo(Object obj) {
-    	if(!(obj instanceof Student)) {
-  		  return -1;
-  	  }
+        if( (!(obj instanceof Student)) || (obj == null) ) {
+  		    return -1;
+  	    }
   	  
-  	  //create Student obj for target
+  	    //create Student obj for target
     	Student target= (Student) obj;
-  	  
-  	  //check for fname and lname equality through string.equals():
-  	  if(!(this.fname.equals(target.fname))||!(this.lname.equals(target.lname))) {
-  		  return -1;
-  	  }
-  	  
-  	  //check for credit equality
-  	  if(this.credit!=target.credit) {
-  		  return -1;
-  	  }
-  		  
-  		  
-  	  
-  	  //at this point target member's name and date equals calling member's so they are equal
-  	  return 1;
+
+        //compare the first and last names:
+        if(!(this.fname.equalsIgnoreCase(target.fname))){
+            return -1;
+        }
+        if(!(this.lname.equalsIgnoreCase(target.lname))){
+            return -1;
+        }
+
+  	    //at this point target member's name and date equals calling member's so they are equal
+  	    return 0;
     }
 
 

@@ -19,22 +19,37 @@ public class StudentList {
         studentList = new Student[0];
         numberOfStudents = 0;
     }
-    private int Find(Student s) {
+
+
+
+    private int find(Student s) {
     	for(int i=0;i<numberOfStudents;i++) {
-    		if(s.compareTo(studentList[i])==1) {
+    		if(s.compareTo(studentList[i]) == 0) {
     			return i;
     		}
     	}
     	return -1;
-    	    }
- private void grow() {
-	 Student [] temp=new Student[this.numberOfStudents+GROW_SIZE];
-	   for(int i=0;i<this.numberOfStudents;i++) {
-		   temp[i]=this.studentList[i];
-	   }
-	   this.studentList=temp;
-     
- }
+    }
+
+
+    public boolean contains(Student s){
+    	for(int i=0;i<this.numberOfStudents;i++){
+    		if(this.studentList[i].compareTo(s) == 0){
+    			return true;
+			}
+		}
+    	return false;
+	}
+
+ 	private void grow() {
+	 	Student [] temp=new Student[this.numberOfStudents+GROW_SIZE];
+
+	 	for(int i=0;i<this.numberOfStudents;i++) {
+	   		temp[i]=this.studentList[i];
+	   	}
+
+	 	this.studentList=temp;
+ 	}
     
 
     /**
@@ -43,16 +58,14 @@ public class StudentList {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-   
-
     public void add(Student s){
-    	if(Find(s)==-1) {
+    	if(find(s)==-1) {
     		if(this.numberOfStudents==this.studentList.length) {
     			this.grow();
     		}
-    		this.studentList[numberOfStudents]=s;
+    		this.studentList[this.numberOfStudents]=s;
+    		this.numberOfStudents++;
     	}
-    	
     }
 
 
@@ -64,7 +77,7 @@ public class StudentList {
      @author Tin Fung
      */
     public boolean remove(Student s){
-    	int find=Find(s);
+    	int find=find(s);
     
     	if(find!=-1) {
     		this.studentList[find]=this.studentList[this.numberOfStudents];

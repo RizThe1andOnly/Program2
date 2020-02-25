@@ -55,6 +55,15 @@ public class TuitionManager {
      */
     private void addNewInstateStudent(){
 
+        String[] studentInfo = stdin.nextLine().split(" ");
+        Student newInstateStudent = createNewStudentObj('I',studentInfo);
+
+        if(!(students.contains(newInstateStudent))){
+            students.add(newInstateStudent);
+        }
+        else{
+            System.out.println("Student already in the list");
+        }
     }
 
 
@@ -94,6 +103,16 @@ public class TuitionManager {
      */
     private void handleBadCommands(){
 
+    }
+
+
+    private Student createNewStudentObj(char studentType, String[] studentInfo){
+        switch (studentType){
+            case 'I': return new Instate(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Integer.parseInt(studentInfo[3]));
+            case 'O': return new Outstate(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Boolean.parseBoolean(studentInfo[3]));
+            case 'N': return new International(studentInfo[0],studentInfo[1],Integer.parseInt(studentInfo[2]),Boolean.parseBoolean(studentInfo[3]));
+            default: return null;
+        }
     }
 
 
