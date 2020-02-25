@@ -43,7 +43,29 @@ public class Outstate extends Student {
      */
     @Override
     public int tuitionDue() {
+    	int OutStateTuition=756;
+    	int full_time=1441;
+    	int part_time=846;
+    	int tristateDiscount=200;
+    	int over_15=15;
 
+    	 	if(this.credit>=12) {
+        	if(this.tristate) {
+        		if(this.credit>=over_15) {
+    	    		return over_15*(OutStateTuition-tristateDiscount)+full_time;}
+        		return this.credit*(OutStateTuition-tristateDiscount)+full_time;
+
+        	}else {
+        		if(this.credit>=over_15) {
+    	    		return over_15*OutStateTuition+full_time;}
+        		return this.credit*OutStateTuition+full_time;
+
+        	}
+    	}else {
+    		return this.credit*OutStateTuition+part_time;
+    	}
+
+    
     }
 
 
@@ -59,7 +81,13 @@ public class Outstate extends Student {
      */
     @Override
     public String toString(){
+    	if(this.tristate) {
+        	return super.toString()+"\nOustate TristateArea: Yes\nTuition Due: "+this.tuitionDue();
 
+    	}else {
+        	return super.toString()+"\nOustate TristateArea: No\nTuition Due: "+this.tuitionDue();
+
+    	}
     }
 
 
@@ -70,6 +98,15 @@ public class Outstate extends Student {
      @author Tin Fung
      */
     public static void main(String[] args){
-
+    	Outstate test=new Outstate ("John","White",12,true);
+    	test.tuitionDue();
+    	System.out.println(test.toString());
+    	Outstate test2=new Outstate ("May","Anderson",17,false);
+    	test2.tuitionDue();
+    	System.out.println(test2.toString());
+    	Outstate test3=new Outstate ("John","White",12,true);
+    	test.tuitionDue();
+    	System.out.println(test.toString());
+    	System.out.println(test.compareTo(test3));
     }
 }
