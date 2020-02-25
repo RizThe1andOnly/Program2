@@ -8,7 +8,7 @@
 public class StudentList {
     private Student[] studentList;
     private int numberOfStudents;
-
+    private final int GROW_SIZE = 4;
     /**
      Constructor for the StudentList class object. It will instantiate object by
      instantiating the array holding students and the number of students.
@@ -19,7 +19,23 @@ public class StudentList {
         studentList = new Student[0];
         numberOfStudents = 0;
     }
-
+    private int Find(Student s) {
+    	for(int i=0;i<numberOfStudents;i++) {
+    		if(s.compareTo(studentList[i])==1) {
+    			return i;
+    		}
+    	}
+    	return -1;
+    	    }
+ private void grow() {
+	 Student [] temp=new Student[this.numberOfStudents+GROW_SIZE];
+	   for(int i=0;i<this.numberOfStudents;i++) {
+		   temp[i]=this.studentList[i];
+	   }
+	   this.studentList=temp;
+     
+ }
+    
 
     /**
      Adds Student object provided through argument into this container.
@@ -27,8 +43,16 @@ public class StudentList {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    public void add(Student s){
+   
 
+    public void add(Student s){
+    	if(Find(s)==-1) {
+    		if(this.numberOfStudents==this.studentList.length) {
+    			this.grow();
+    		}
+    		this.studentList[numberOfStudents]=s;
+    	}
+    	
     }
 
 
@@ -40,7 +64,15 @@ public class StudentList {
      @author Tin Fung
      */
     public boolean remove(Student s){
-
+    	int find=Find(s);
+    
+    	if(find!=-1) {
+    		this.studentList[find]=this.studentList[this.numberOfStudents];
+    		this.studentList[this.numberOfStudents]=null;
+    		this.numberOfStudents--;
+    		return true;
+    	}
+return false;
     }
 
 
@@ -51,6 +83,8 @@ public class StudentList {
      @author Tin Fung
      */
     public void print(){
-
+    	for(int i=0;i<this.numberOfStudents;i++) {
+    		this.studentList[i].toString();
+    	}
     }
 }
