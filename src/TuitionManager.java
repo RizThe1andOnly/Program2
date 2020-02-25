@@ -50,8 +50,20 @@ public class TuitionManager {
     }
 
 
-    private void addNewStudent(char studentType, String studentInfo){
-
+    private void addNewStudent(char studentType, String studentDetails){
+        String[] studentInfo = studentDetails.split(" ");
+        boolean successfulAdd = false;
+        switch (studentType){
+            case 'I': successfulAdd = addNewInstateStudent(studentInfo);
+            break;
+            case 'O': successfulAdd = addNewOutstateStudent(studentInfo);
+            break;
+            case 'N': successfulAdd = addNewInternationalStudent(studentInfo);
+            break;
+        }
+        if(successfulAdd == false){
+            System.out.println("Could not add student.");
+        }
     }
 
 
@@ -175,7 +187,19 @@ public class TuitionManager {
      @author Tin Fung
      */
     private void removeStudent(String studentInfo){
+        String[] studentDetails = studentInfo.split(" ");
+        if(studentDetails.length != 2){
+            System.out.println("Wrong number of inputs, should be: R firstname lastname");
+            return;
+        }
 
+        String firstName = studentDetails[0];
+        String lastName = studentDetails[1];
+        Student studentToBeRemoved = new Instate(firstName,lastName,0,0);
+        boolean successfulRemoval = students.remove(studentToBeRemoved);
+        if(successfulRemoval == false){
+            System.out.println("Failed to remove Student");
+        }
     }
 
 
