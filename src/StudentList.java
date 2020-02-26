@@ -21,10 +21,16 @@ public class StudentList {
     }
 
 
+	/**
+	 Locates the index of the Student object in the list
+	 @param studentToBeFound Student object for which the index is to be located
+	 @return int, index of the Student object in the list; -1 if object not in list
 
-    private int find(Student s) {
+	 @author Tin Fung
+	 */
+	private int find(Student studentToBeFound) {
     	for(int i=0;i<numberOfStudents;i++) {
-    		if(s.compareTo(studentList[i]) == 0) {
+    		if(studentToBeFound.compareTo(studentList[i]) == 0) {
     			return i;
     		}
     	}
@@ -32,15 +38,28 @@ public class StudentList {
     }
 
 
-    public boolean contains(Student s){
+	/**
+	 Checks if the Student object is in the list.
+	 @param studentToBeFound Student object being looked for in this method
+	 @return true if the object is in the list, false otherwise
+
+	 @author Rizwan Chowdhury
+	 */
+	public boolean contains(Student studentToBeFound){
     	for(int i=0;i<this.numberOfStudents;i++){
-    		if(this.studentList[i].compareTo(s) == 0){
+    		if(this.studentList[i].compareTo(studentToBeFound) == 0){
     			return true;
 			}
 		}
     	return false;
 	}
 
+
+	/**
+	 Grows the array when its capacity is reached.
+
+	 @author Tin Fung
+	 */
  	private void grow() {
 	 	Student [] temp=new Student[this.numberOfStudents+GROW_SIZE];
 
@@ -85,7 +104,8 @@ public class StudentList {
     		this.numberOfStudents--;
     		return true;
     	}
-return false;
+
+    	return false;
     }
 
 
