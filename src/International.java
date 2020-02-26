@@ -9,6 +9,12 @@
 public class International extends Student {
 
     private boolean exchange;
+	private final int INTERNATIONAL_TUITION = 945;
+	private final int INTERNATIONAL_FEE = 350;
+	private final int FULL_TIME_FEE = 1441;
+	private final int PART_TIME = 846;
+	private final int OVER_FIFTEEN_CREDITS = 15;
+	private final int FULL_TIME_THRESHOLD = 12;
 
     /**
      Constructor for the International class, instantiates the object by calling the
@@ -40,22 +46,15 @@ public class International extends Student {
      */
     @Override
     public int tuitionDue() {
-
-    	int InternationalTuition=945;
-    	int Internationalfee=350;
-    	int full_time=1441;
-    	int part_time=846;
-    	int over_15=15;
-
     	if(this.exchange) {
-    		return full_time+Internationalfee;
+    		return FULL_TIME_FEE+INTERNATIONAL_FEE;
     	}else {
-    		if(this.credit>=over_15) {
-        		return over_15*InternationalTuition+full_time;
-        	}else   if(this.credit>=12) {
-    		return this.credit*InternationalTuition+full_time+Internationalfee;
+    		if(this.credit>=OVER_FIFTEEN_CREDITS) {
+        		return OVER_FIFTEEN_CREDITS*INTERNATIONAL_TUITION+FULL_TIME_FEE+INTERNATIONAL_FEE;
+        	}else   if(this.credit>=FULL_TIME_THRESHOLD) {
+    		return this.credit*INTERNATIONAL_TUITION+FULL_TIME_FEE+INTERNATIONAL_FEE;
     	}else {
-    		return this.credit*InternationalTuition+part_time+Internationalfee;
+    		return this.credit*INTERNATIONAL_TUITION+PART_TIME+INTERNATIONAL_FEE;
     	}
     	}
     

@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
-<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/sampleInput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/International.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/International.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Program2/StudentList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/StudentList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Program2/TuitionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/TuitionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
->>>>>>> 6a3b759211b42c1423d60a6acc92f9efe6f80fcd
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +73,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="829" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582397307765" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582678296673">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582688912028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582678296673" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582678296672">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582688912028" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582688912028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582678296672" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582678296672">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582688912028" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582688912028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582678296672" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582678296673">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582688912028" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582688912028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582678296673" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582688912028" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582397792133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

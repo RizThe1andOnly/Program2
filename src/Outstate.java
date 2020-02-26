@@ -10,6 +10,14 @@ public class Outstate extends Student {
 
     private boolean tristate;
 
+    //constants:
+	private final int OUT_STATE_TUITION = 756;
+	private final int FULL_TIME_FEE = 1441;
+	private final int PART_TIME = 846;
+	private final int TRISTATE_DISCOUNT = 200;
+	private final int OVER_FIFTEEN = 15;
+	private final int FULL_TIME_THRESHOLD = 12;
+
     /**
      Constructor for the Oustate class, instantiate the class by calling the
      super class's constructor.
@@ -43,29 +51,24 @@ public class Outstate extends Student {
      */
     @Override
     public int tuitionDue() {
-    	int OutStateTuition=756;
-    	int full_time=1441;
-    	int part_time=846;
-    	int tristateDiscount=200;
-    	int over_15=15;
 
-    	 	if(this.credit>=12) {
-        	if(this.tristate) {
-        		if(this.credit>=over_15) {
-    	    		return over_15*(OutStateTuition-tristateDiscount)+full_time;}
-        		return this.credit*(OutStateTuition-tristateDiscount)+full_time;
-
-        	}else {
-        		if(this.credit>=over_15) {
-    	    		return over_15*OutStateTuition+full_time;}
-        		return this.credit*OutStateTuition+full_time;
-
+    	if(this.credit>=FULL_TIME_THRESHOLD) {
+    		if(this.tristate) {
+        		if(this.credit>=OVER_FIFTEEN) {
+    	    		return OVER_FIFTEEN*(OUT_STATE_TUITION-TRISTATE_DISCOUNT)+FULL_TIME_FEE;
+        		}
+        		return this.credit*(OUT_STATE_TUITION-TRISTATE_DISCOUNT)+FULL_TIME_FEE;
+        	}
+    		else {
+        		if(this.credit>=OVER_FIFTEEN) {
+    	    		return OVER_FIFTEEN*OUT_STATE_TUITION+FULL_TIME_FEE;
+        		}
+        		return this.credit*OUT_STATE_TUITION+FULL_TIME_FEE;
         	}
     	}else {
-    		return this.credit*OutStateTuition+part_time;
+    		return this.credit*OUT_STATE_TUITION+PART_TIME;
     	}
 
-    
     }
 
 

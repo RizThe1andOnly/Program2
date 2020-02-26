@@ -13,10 +13,13 @@ public class TuitionManager {
     /**
      method that will be called to run the project.
      */
-    public void run(){
+    public void run() {
         //initiate scanner and studentlist objects
         students = new StudentList();
         stdin = new Scanner(System.in);
+
+        //message that program started:
+        System.out.println("Welcome, please enter inputs below in proper format.");
 
         //loop to accept inputs and do appropriate procedures
         boolean loop = true;
@@ -217,5 +220,6 @@ public class TuitionManager {
      */
     private void printCommand(){
         students.print();
+        System.out.println("--End of List--");
     }
 }

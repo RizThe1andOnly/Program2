@@ -10,6 +10,13 @@ public class Instate extends Student {
 
     private int funds;
 
+    //constants
+    private int IN_STATE_TUITION = 433;
+    private int FULL_TIME_FEE = 1441;
+    private int PART_TIME = 846;
+    private int OVER_FIFTEEN_CREDITS = 15;
+    private int FULL_TIME_THRESHOLD = 12;
+
     /**
      Constructor for the Instate class. Creates a Instate object by creating an
      instance of the super Student class.
@@ -41,17 +48,14 @@ public class Instate extends Student {
      @author Tin Fung
      */
     public int tuitionDue(){
-    	int InStateTuition=433;
-    	int full_time=1441;
-    	int part_time=846;
-    	int over_15=15;
-    	if(this.credit>=over_15) {
-    		return over_15*InStateTuition+full_time-this.funds;
 
-    	}else if(this.credit>=12) {
-    		return this.credit*InStateTuition+full_time-this.funds;
+    	if(this.credit>=OVER_FIFTEEN_CREDITS) {
+    		return OVER_FIFTEEN_CREDITS*IN_STATE_TUITION+FULL_TIME_FEE-this.funds;
+
+    	}else if(this.credit>=FULL_TIME_THRESHOLD) {
+    		return this.credit*IN_STATE_TUITION+FULL_TIME_FEE-this.funds;
     	}else {
-    		return this.credit*InStateTuition+part_time;
+    		return this.credit*IN_STATE_TUITION+PART_TIME;
     	}
     }
 
