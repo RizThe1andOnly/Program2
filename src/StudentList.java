@@ -97,7 +97,7 @@ return false;
      */
     public void print(){
     	for(int i=0;i<this.numberOfStudents;i++) {
-    		this.studentList[i].toString();
+    		System.out.println(this.studentList[i].toString());
     	}
     }
 }

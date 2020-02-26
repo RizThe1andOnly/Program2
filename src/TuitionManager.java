@@ -86,10 +86,11 @@ public class TuitionManager {
         Student newInstateStudent = new Instate(firstName,lastName,credits,funds);
         if(!(students.contains(newInstateStudent))){
             students.add(newInstateStudent);
+            return true;
         }
 
         System.out.print("Student already in students list. ");
-        return true;
+        return false;
     }
 
 
