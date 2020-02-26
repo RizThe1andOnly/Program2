@@ -12,6 +12,17 @@ public class TuitionManager {
     private StudentList students;
     private Scanner stdin;
 
+    //constants:
+    private final int COMMAND_POSITION = 0;
+    private final int FIRST_NAME_POSITION = 0;
+    private final int LAST_NAME_POSITION = 1;
+    private final int CREDIT_POSITION = 2;
+    private final int TYPE_SPECIFIC_POSITION = 3;
+    private final int SPLIT_LIMIT = 2; //how many tokens to split initial command string into
+    private final int COMMAND_LENGTH = 1;
+    private final int STUDENT_INFO_POSITION = 1;
+    private final int INTERNATIONAL_STUDENT_CREDIT_REQUIREMENT = 9;
+
     /**
      method that will be called to run the project.
 
@@ -30,20 +41,20 @@ public class TuitionManager {
         String command;
         String[] inputLine;
         while(loop == true){
-            inputLine = stdin.nextLine().split(" ",2);
-            command = inputLine[0];
-            if(command.length()!=1){
+            inputLine = stdin.nextLine().split(" ",SPLIT_LIMIT);
+            command = inputLine[COMMAND_POSITION];
+            if(command.length()!=COMMAND_LENGTH){
                 handleBadCommands("Input does not match format");
             }
             switch (command.charAt(0)){
                 //cases based on required inputs:
-                case 'I': addNewStudent('I',inputLine[1]);
+                case 'I': addNewStudent('I',inputLine[STUDENT_INFO_POSITION]);
                 break;
-                case 'O': addNewStudent('O',inputLine[1]);
+                case 'O': addNewStudent('O',inputLine[STUDENT_INFO_POSITION]);
                 break;
-                case 'N': addNewStudent('N',inputLine[1]);
+                case 'N': addNewStudent('N',inputLine[STUDENT_INFO_POSITION]);
                 break;
-                case 'R': removeStudent(inputLine[1]);
+                case 'R': removeStudent(inputLine[STUDENT_INFO_POSITION]);
                 break;
                 case 'P': printCommand();
                 break;
@@ -68,144 +79,112 @@ public class TuitionManager {
     private void addNewStudent(char studentType, String studentDetails){
         String[] studentInfo = studentDetails.split(" ");
         boolean successfulAdd = false;
+
+        String firstName = studentInfo[FIRST_NAME_POSITION];
+        String lastName = studentInfo[LAST_NAME_POSITION];
+        int credits = Integer.parseInt(studentInfo[CREDIT_POSITION]);
+        String typeSpecificData = studentInfo[TYPE_SPECIFIC_POSITION];
+
         switch (studentType){
-            case 'I': successfulAdd = addNewInstateStudent(studentInfo);
+            case 'I': addNewInstateStudent(firstName,lastName,credits,typeSpecificData);
             break;
-            case 'O': successfulAdd = addNewOutstateStudent(studentInfo);
+            case 'O': addNewOutstateStudent(firstName,lastName,credits,typeSpecificData);
             break;
-            case 'N': successfulAdd = addNewInternationalStudent(studentInfo);
+            case 'N': addNewInternationalStudent(firstName,lastName,credits,typeSpecificData);
             break;
-        }
-        if(successfulAdd == false){
-            System.out.println("Could not add student.");
         }
     }
 
 
     /**
-     Helper method to specifically add an Instate student to the list
-     @param studentInfo String array that contains student details as tokens
-     @return true if add was successful or false if unsuccessful
+     Adds specifically an Instate student to the list.
+
+     @param firstName Students First name
+     @param lastName Student's las name
+     @param credits Number of credits student is taking
+     @param fundString  funding for Instate student, is type-specific data
 
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    private boolean addNewInstateStudent(String[] studentInfo){
-        if(studentInfo.length != 4){
-            return false;
-        }
+    private void addNewInstateStudent(String firstName, String lastName, int credits, String fundString){
 
-        String firstName = studentInfo[0];
-        String lastName = studentInfo[1];
-        int credits;
-        int funds;
-        try {
-            credits = Integer.parseInt(studentInfo[2]);
-            funds = Integer.parseInt(studentInfo[3]);
-        }catch (NumberFormatException e){
-            return false;
-        }
+        int funds = Integer.parseInt(fundString);
 
         Student newInstateStudent = new Instate(firstName,lastName,credits,funds);
         if(!(students.contains(newInstateStudent))){
             students.add(newInstateStudent);
-            return true;
         }
-
-        System.out.print("Student already in students list. ");
-        return false;
+        else{
+            System.out.print("Student already in students list. Could not add Student");
+        }
     }
 
 
     /**
-     Helper method to specifically add an Outstate student to the list
-     @param studentInfo String array that contains student details as tokens
-     @return true if add was successful or false if unsuccessful
+     Specifically adds an Outstate student to the list. Gets first name - credit from calling method and parses
+     type-specific string tristateString to obtain a boolean value.
 
-     @author Rizwan Chowdhury
-     @author Tin Fung
+     @param firstName Student's firstname
+     @param lastName Student's last name
+     @param credits number of credits the student is taking
+     @param tristateString String represantion of wheter student lives in tristate area or not, type-specific data
      */
-    private boolean addNewOutstateStudent(String[] studentInfo){
-        if(studentInfo.length != 4){
-            return false;
-        }
+    private void addNewOutstateStudent(String firstName, String lastName, int credits, String tristateString){
 
-        String firstName = studentInfo[0];
-        String lastName = studentInfo[1];
-        int credits;
         boolean tristate;
-
-        try {
-            credits = Integer.parseInt(studentInfo[2]);
-        }catch (NumberFormatException e){
-            return false;
-        }
-
-        switch (getBooleanValue(studentInfo[3])){
+        switch (getBooleanValue(tristateString)){
             case 1: tristate = true;
             break;
             case 0: tristate = false;
             break;
             default: System.out.println("Bad Input: Value for tristate should be \"T\" or \"F\"");
-                     return false;
+                     return;
         }
 
         Student newOutstateStudent = new Outstate(firstName,lastName,credits,tristate);
         if(!(students.contains(newOutstateStudent))){
             students.add(newOutstateStudent);
-            return true;
         }
-
-        System.out.print("Student already in students list. ");
-        return false;
+        else{
+            System.out.print("Student already in students list. Could not add student");
+        }
     }
 
 
     /**
-     Helper method to specifically add an International student to the list
-     @param studentInfo String array that contains student details as tokens
-     @return true if add was successful or false if unsuccessful
+     Helper method to add new International students to the running list.
+     @param firstName Student's first name
+     @param lastName Student's last name
+     @param credits  Student's credits
+     @param exchangeString Is student an exchange student or not, boolean in string form, type-specific data
 
      @author Rizwan Chowdhury
-     @author Tin Fung
      */
-    private boolean addNewInternationalStudent(String[] studentInfo){
-        if(studentInfo.length != 4){
-            return false;
+    private void addNewInternationalStudent(String firstName, String lastName, int credits, String exchangeString){
+
+        if(credits<INTERNATIONAL_STUDENT_CREDIT_REQUIREMENT){
+            System.out.println("Not enough credits for International Student. Could not add Student");
+            return;
         }
 
-        String firstName = studentInfo[0];
-        String lastName = studentInfo[1];
-        int credits;
         boolean exchange;
-
-        try {
-            credits = Integer.parseInt(studentInfo[2]);
-            if(credits<9){
-                System.out.println("Not enough credits for an International Student");
-                return false;
-            }
-        }catch (NumberFormatException e){
-            return false;
-        }
-
-        switch (getBooleanValue(studentInfo[3])){
+        switch (getBooleanValue(exchangeString)){
             case 1: exchange = true;
                 break;
             case 0: exchange = false;
                 break;
             default: System.out.println("Bad Input: Value for exchange should be \"T\" or \"F\"");
-                return false;
+                     return;
         }
 
         Student newInternationalStudent = new International(firstName,lastName,credits,exchange);
         if(!(students.contains(newInternationalStudent))){
             students.add(newInternationalStudent);
-            return true;
         }
-
-        System.out.print("Student already in students list. ");
-        return false;
+        else{
+            System.out.print("Student already in students list. ");
+        }
     }
 
 

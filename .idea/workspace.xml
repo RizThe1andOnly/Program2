@@ -4,8 +4,7 @@
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prog2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prog2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,30 +66,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="829" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582397307765" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582698155915">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582751147251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582698155915" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582698155914">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582751147251" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582751147251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582698155914" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582698155913">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582751147251" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582751147251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582698155913" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582698155914">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582751147251" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582751147251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582698155914" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582751147251" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582397792133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="368" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582397792133" />
-    <state x="0" y="23" key="com.intellij.ide.util.TipDialog" timestamp="1582678147507">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582739444129">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582676713973" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582739444129" />
     <state x="0" y="23" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582678147507" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1582397647036">
       <screen x="0" y="0" width="1366" height="728" />

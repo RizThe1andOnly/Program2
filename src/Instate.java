@@ -34,7 +34,7 @@ public class Instate extends Student {
         super(fname,lname,credit);
 
         //set funds property
-        this.funds = funds;
+        this.funds = (credit<FULL_TIME_THRESHOLD) ? 0:funds;
     }
 
 
