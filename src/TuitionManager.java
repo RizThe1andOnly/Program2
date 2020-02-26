@@ -11,6 +11,8 @@ public class TuitionManager {
 
     /**
      method that will be called to run the project.
+
+     @author Rizwan Chowdhury
      */
     public void run() {
         //initiate scanner and studentlist objects
@@ -52,6 +54,14 @@ public class TuitionManager {
     }
 
 
+    /**
+     Adds a new student to the running list within this class.
+     @param studentType Type of student to add (I)nstate, (O)utstate, I(N)ternational
+     @param studentDetails String that contains details inputted as part of command
+
+     @author Rizwan Chowdhury
+     @author Tin Fung
+     */
     private void addNewStudent(char studentType, String studentDetails){
         String[] studentInfo = studentDetails.split(" ");
         boolean successfulAdd = false;
@@ -69,6 +79,14 @@ public class TuitionManager {
     }
 
 
+    /**
+     Helper method to specifically add an Instate student to the list
+     @param studentInfo String array that contains student details as tokens
+     @return true if add was successful or false if unsuccessful
+
+     @author Rizwan Chowdhury
+     @author Tin Fung
+     */
     private boolean addNewInstateStudent(String[] studentInfo){
         if(studentInfo.length != 4){
             return false;
@@ -96,6 +114,14 @@ public class TuitionManager {
     }
 
 
+    /**
+     Helper method to specifically add an Outstate student to the list
+     @param studentInfo String array that contains student details as tokens
+     @return true if add was successful or false if unsuccessful
+
+     @author Rizwan Chowdhury
+     @author Tin Fung
+     */
     private boolean addNewOutstateStudent(String[] studentInfo){
         if(studentInfo.length != 4){
             return false;
@@ -131,6 +157,15 @@ public class TuitionManager {
         return false;
     }
 
+
+    /**
+     Helper method to specifically add an International student to the list
+     @param studentInfo String array that contains student details as tokens
+     @return true if add was successful or false if unsuccessful
+
+     @author Rizwan Chowdhury
+     @author Tin Fung
+     */
     private boolean addNewInternationalStudent(String[] studentInfo){
         if(studentInfo.length != 4){
             return false;
@@ -171,6 +206,14 @@ public class TuitionManager {
     }
 
 
+    /**
+     * Helper method to parse string containing type-specific-data for booleans from input
+     * to determine which (if any) boolean value is being provided as input.
+     * @param boolString String containing the boolean input, either "T" or "F"
+     * @return int: 1 if true, 0 if false, -1 if not proper input format
+     *
+     * @author Rizwan Chowdhury
+     */
     private int getBooleanValue(String boolString){
         if(boolString.equals("T")){
             return 1;
@@ -208,6 +251,9 @@ public class TuitionManager {
 
     /**
      Handles bad commands inputted into the command line.
+
+     @author Rizwan Chowdhury
+     @author Tin Fung
      */
     private void handleBadCommands(String command){
         System.out.println("Bad input: " + command);
@@ -216,6 +262,9 @@ public class TuitionManager {
 
     /**
      * Prints a list of Students and the tuition amount due for each
+     *
+     * @author Rizwan Chowdhury
+     * @author Tin Fung
      */
     private void printCommand(){
         students.print();
