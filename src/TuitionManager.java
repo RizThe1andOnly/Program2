@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class TuitionManager {
     private StudentList students;
-    Scanner stdin;
+    private Scanner stdin;
 
 
     /**
@@ -23,10 +23,10 @@ public class TuitionManager {
         String command;
         String[] inputLine;
         while(loop == true){
-            inputLine = stdin.nextLine().split(" ",1);
+            inputLine = stdin.nextLine().split(" ",2);
             command = inputLine[0];
             if(command.length()!=1){
-                handleBadCommands();
+                handleBadCommands("Input does not match format");
             }
             switch (command.charAt(0)){
                 //cases based on required inputs:
@@ -43,7 +43,7 @@ public class TuitionManager {
                 case 'Q': System.out.println("Program Terminated");
                           loop = false;
                 break;
-                default : handleBadCommands();
+                default : handleBadCommands("\'"+command.charAt(0)+"\'"+" is not a proper command");
             }
         }
 
@@ -206,8 +206,8 @@ public class TuitionManager {
     /**
      Handles bad commands inputted into the command line.
      */
-    private void handleBadCommands(){
-
+    private void handleBadCommands(String command){
+        System.out.println("Bad input: " + command);
     }
 
 
@@ -215,6 +215,6 @@ public class TuitionManager {
      * Prints a list of Students and the tuition amount due for each
      */
     private void printCommand(){
-
+        students.print();
     }
 }
