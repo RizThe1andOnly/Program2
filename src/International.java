@@ -71,7 +71,7 @@ public class International extends Student {
         Tuition Due: the value of tuition
      @return String representation of the International student
 
-     @author Rizwan Chowdhury
+
      @author Tin Fung
      */
     @Override
@@ -90,7 +90,7 @@ public class International extends Student {
     /**
      Testbed main to test the International class with different test cases.
      @param args arguments passed into the testbed main class
-     @author Rizwan Chowdhury
+
      @author Tin Fung
      */
     public static void main(String[] args){

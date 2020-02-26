@@ -69,7 +69,6 @@ public class Instate extends Student {
 
      @return A String containing the information regarding the instate student
 
-     @author Rizwan Chowdhury
      @author Tin Fung
      */
     @Override

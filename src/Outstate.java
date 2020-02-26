@@ -79,7 +79,7 @@ public class Outstate extends Student {
         Oustate TristateArea: (Yes/No)
         Tuition Due: value of tuitionDue()
      @return String representation of an Outstate class
-     @author Rizwan Chowdhury
+
      @author Tin Fung
      */
     @Override
@@ -97,7 +97,7 @@ public class Outstate extends Student {
     /**
      Testbed main to test the Outstate class with different test cases.
      @param args arguments passed into the testbed main class
-     @author Rizwan Chowdhury
+
      @author Tin Fung
      */
     public static void main(String[] args){

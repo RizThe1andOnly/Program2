@@ -4,6 +4,9 @@ import java.util.Scanner;
  Class to handle the I/O for the project and manage the functionalities and flow of the other
  classes. Will issue add/remove and print commands to be carried out by other classes. Will
  create the objects, based on input, that tasks will be carried out on.
+
+ @author Rizwan Chowdhury
+ @author Tin Fung
  */
 public class TuitionManager {
     private StudentList students;
