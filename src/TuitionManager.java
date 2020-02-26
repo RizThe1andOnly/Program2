@@ -9,7 +9,6 @@ public class TuitionManager {
     private StudentList students;
     private Scanner stdin;
 
-
     /**
      method that will be called to run the project.
      */

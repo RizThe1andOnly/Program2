@@ -9,6 +9,8 @@
 public class International extends Student {
 
     private boolean exchange;
+
+    //constants
 	private final int INTERNATIONAL_TUITION = 945;
 	private final int INTERNATIONAL_FEE = 350;
 	private final int FULL_TIME_FEE = 1441;
