@@ -22,6 +22,7 @@ public class TuitionManager {
     private final int COMMAND_LENGTH = 1;
     private final int STUDENT_INFO_POSITION = 1;
     private final int INTERNATIONAL_STUDENT_CREDIT_REQUIREMENT = 9;
+    private final int MINIMUM_CREDIT_ALLOWED = 1;
 
     /**
      method that will be called to run the project.
@@ -78,12 +79,16 @@ public class TuitionManager {
      */
     private void addNewStudent(char studentType, String studentDetails){
         String[] studentInfo = studentDetails.split(" ");
-        boolean successfulAdd = false;
 
         String firstName = studentInfo[FIRST_NAME_POSITION];
         String lastName = studentInfo[LAST_NAME_POSITION];
         int credits = Integer.parseInt(studentInfo[CREDIT_POSITION]);
         String typeSpecificData = studentInfo[TYPE_SPECIFIC_POSITION];
+
+        if(credits<MINIMUM_CREDIT_ALLOWED){
+            System.out.println("Need to take 1 or more credits. Could not add student");
+            return;
+        }
 
         switch (studentType){
             case 'I': addNewInstateStudent(firstName,lastName,credits,typeSpecificData);
@@ -216,14 +221,11 @@ public class TuitionManager {
      */
     private void removeStudent(String studentInfo){
         String[] studentDetails = studentInfo.split(" ");
-        if(studentDetails.length != 2){
-            System.out.println("Wrong number of inputs, should be: R firstname lastname");
-            return;
-        }
 
-        String firstName = studentDetails[0];
-        String lastName = studentDetails[1];
+        String firstName = studentDetails[FIRST_NAME_POSITION];
+        String lastName = studentDetails[LAST_NAME_POSITION];
         Student studentToBeRemoved = new Instate(firstName,lastName,0,0);
+
         boolean successfulRemoval = students.remove(studentToBeRemoved);
         if(successfulRemoval == false){
             System.out.println("Failed to remove Student");

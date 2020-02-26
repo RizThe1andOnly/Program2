@@ -11,11 +11,12 @@ public class Instate extends Student {
     private int funds;
 
     //constants
-    private int IN_STATE_TUITION = 433;
-    private int FULL_TIME_FEE = 1441;
-    private int PART_TIME = 846;
-    private int OVER_FIFTEEN_CREDITS = 15;
-    private int FULL_TIME_THRESHOLD = 12;
+    private final int IN_STATE_TUITION = 433;
+    private final int FULL_TIME_FEE = 1441;
+    private final int PART_TIME = 846;
+    private final int OVER_FIFTEEN_CREDITS = 15;
+    private final int FULL_TIME_THRESHOLD = 12;
+    private final int MINIMUM_FUNDS = 0;
 
     /**
      Constructor for the Instate class. Creates a Instate object by creating an
@@ -34,7 +35,7 @@ public class Instate extends Student {
         super(fname,lname,credit);
 
         //set funds property
-        this.funds = (credit<FULL_TIME_THRESHOLD) ? 0:funds;
+        this.funds = ((credit<FULL_TIME_THRESHOLD)||(credit<MINIMUM_FUNDS)) ? MINIMUM_FUNDS:funds;
     }
 
 

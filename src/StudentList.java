@@ -116,12 +116,6 @@ public class StudentList {
      @author Tin Fung
      */
     public void print(){
-
-    	if(this.numberOfStudents==0){
-    		System.out.println("No Students Enrolled.");
-    		return;
-		}
-
     	for(int i=0;i<this.numberOfStudents;i++) {
     		System.out.println(this.studentList[i].toString());
     		System.out.println();
