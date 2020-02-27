@@ -77,10 +77,10 @@ public class International extends Student {
     @Override
     public String toString(){
     	if(this.exchange) {
-        	return super.toString()+"\nInternational  Exchange: Yes\nTuition Due: "+this.tuitionDue();
+        	return super.toString()+"International\nExchange: Yes";
 
     	}else {
-        	return super.toString()+"\nInternational  Exchange: No\nTuition Due: "+this.tuitionDue();
+        	return super.toString()+"International\nExchange: No";
 
     	}
 

@@ -85,10 +85,10 @@ public class Outstate extends Student {
     @Override
     public String toString(){
     	if(this.tristate) {
-        	return super.toString()+"\nOustate TristateArea: Yes\nTuition Due: "+this.tuitionDue();
+        	return super.toString()+"Outstate\nTristateArea: Yes";
 
     	}else {
-        	return super.toString()+"\nOustate TristateArea: No\nTuition Due: "+this.tuitionDue();
+        	return super.toString()+"Outstate\nTristateArea: No";
 
     	}
     }

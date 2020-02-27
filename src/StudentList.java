@@ -118,6 +118,7 @@ public class StudentList {
     public void print(){
     	for(int i=0;i<this.numberOfStudents;i++) {
     		System.out.println(this.studentList[i].toString());
+    		System.out.println("Tuition Due: " + this.studentList[i].tuitionDue());
     		System.out.println();
     	}
     }

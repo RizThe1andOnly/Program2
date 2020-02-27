@@ -48,6 +48,7 @@ public class Instate extends Student {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
+    @Override
     public int tuitionDue(){
 
     	if(this.credit>=OVER_FIFTEEN_CREDITS) {
@@ -74,7 +75,7 @@ public class Instate extends Student {
      */
     @Override
     public String toString(){
-    	return super.toString()+"\nInstate Funds: "+this.funds+"\nTuition Due: "+this.tuitionDue();
+    	return super.toString()+ "Instate" + "\nInstate Funds: "+this.funds;
     }
 
 

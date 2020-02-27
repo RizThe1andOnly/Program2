@@ -73,7 +73,7 @@ public abstract class Student implements Comparable {
      */
     @Override
     public String toString(){
-    	return this.fname+" "+this.lname+" Credit: "+this.credit;
+    	return this.fname+" "+this.lname+":\nCredit: "+this.credit + "\nStatus: ";
     }
 
 
