@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +19,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/RizThe1andOnly/Program2.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1YA2tYLClIO31EceX3ph4blqEvW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -68,22 +71,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="829" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582397307765" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582833329804">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582848551032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582833329804" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582833329804">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582848551032" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582848551032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582833329804" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582833329804">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582848551032" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582848551032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582833329804" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582833329804">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582848551032" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582848551032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582833329804" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582848551032" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582397792133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -102,6 +102,5 @@ public class International extends Student {
     	test2.tuitionDue();
     	System.out.println(test2.toString());
 
-
     }
 }
