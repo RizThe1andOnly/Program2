@@ -35,7 +35,7 @@ public class Instate extends Student {
         super(fname,lname,credit);
 
         //set funds property
-        this.funds = ((credit<FULL_TIME_THRESHOLD)||(credit<MINIMUM_FUNDS)) ? MINIMUM_FUNDS:funds;
+        this.funds = ((credit<FULL_TIME_THRESHOLD)||(funds<MINIMUM_FUNDS)) ? MINIMUM_FUNDS:funds;
     }
 
 
@@ -87,10 +87,74 @@ public class Instate extends Student {
      */
     public static void main(String[] args){ 
     	
-    	Instate test=new Instate ("John","white",12,1000);
-    	test.tuitionDue();
-    	System.out.println(test.toString());
+//    	Instate test=new Instate ("John","white",12,1000);
+//    	test.tuitionDue();
+//    	System.out.println(test.toString());
+
+    	//test checkTestCases(String,String)
+        // input: "20" and "20", expected output: pass
+        checkTestCases(String.valueOf(20),"20");
+        //input: "hello" and "bye", expected output: fail
+        checkTestCases("hello","bye");
 
 
+        String expected; //will be used to pass in expeceted string to checkTestCases
+
+        //test constructor Instate(String,String,int,int)
+        // input: Rizwan Chowdhury 13 200
+        // expected output(from toString): Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 200
+        Instate checkConstrucotr1_1 = new Instate("Rizwan", "Chowdhury", 13, 200);
+        expected = "Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 200";
+        checkTestCases(checkConstrucotr1_1.toString(),expected);
+        //input: Rizwan Chowdhury 13 -200
+        //expected output: Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 0
+        Instate checkConstructor2 = new Instate("Rizwan","Chowdhury",13,-200);
+        expected = "Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 0";
+        checkTestCases(checkConstructor2.toString(),expected);
+        //input: Rizwan Chowdhury 8 299
+        //expected output: Rizwan Chowdhury:\nCredit: 8\nStatus: Instate\nInstate Funds: 0
+        Instate checkConstructor3 = new Instate("Rizwan","Chowdhury",8,299);
+        expected = "Rizwan Chowdhury:\nCredit: 8\nStatus: Instate\nInstate Funds: 0";
+        checkTestCases(checkConstructor3.toString(),expected);
+
+        //test toString()
+        //input: Rizwan Chowdhury 13 200
+        //expected output: Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 200
+        //will use already created object checkConstructor1_1
+        expected = "Rizwan Chowdhury:\nCredit: 13\nStatus: Instate\nInstate Funds: 200";
+        checkTestCases(checkConstrucotr1_1.toString(),expected);
+
+
+        //test tuitionDue()
+        Instate checkTuitionDuePartTime = new Instate("Tin","Fung",7,300);
+        Instate checkTuitionDueFullTime = new Instate("Tin","Orterry",13,200);
+        Instate checkTuitionDueOverFifteen = new Instate("Riz","Chow",17,200);
+        //input: Tin Fung 7 300 = checkTuitionDuePartTime
+        //expected output: 3877
+        checkTestCases(Integer.toString(checkTuitionDuePartTime.tuitionDue()),"3877");
+        //input: Tin Orterry Credits: 13 and Funds: 200 = checkTuitionDueFullTime
+        //expected output: 6870
+        checkTestCases(Integer.toString(checkTuitionDueFullTime.tuitionDue()),"6870");
+        //input: Riz Chow Credits: 17 and funds: 200 = checkTuitionDueOverFifteen
+        //expected output: 7736
+        checkTestCases(Integer.toString(checkTuitionDueOverFifteen.tuitionDue()),"7736");
+
+    }
+
+
+    /**
+     Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
+     Prints pass if test cases matches expected or fail if test case does not match.
+     @param methodResult
+     @param expected
+     */
+    private static void checkTestCases(String methodResult, String expected){
+        boolean pass = expected.equals(methodResult);
+        String statusString = (pass) ? "pass":"fail";
+        System.out.println("-New Case:");
+        System.out.println("--Status: " + statusString);
+        System.out.println("--MethodResult:\n" + methodResult);
+        System.out.println("--Expected:\n" + expected);
+        System.out.println("\n");
     }
 }
