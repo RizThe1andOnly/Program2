@@ -101,15 +101,93 @@ public class Outstate extends Student {
      @author Tin Fung
      */
     public static void main(String[] args){
-    	Outstate test=new Outstate ("John","White",12,true);
-    	test.tuitionDue();
-    	System.out.println(test.toString());
-    	Outstate test2=new Outstate ("May","Anderson",17,false);
-    	test2.tuitionDue();
-    	System.out.println(test2.toString());
-    	Outstate test3=new Outstate ("John","White",12,true);
-    	test.tuitionDue();
-    	System.out.println(test.toString());
-    	System.out.println(test.compareTo(test3));
+//    	Outstate test=new Outstate ("John","White",12,true);
+//    	test.tuitionDue();
+//    	System.out.println(test.toString());
+//    	Outstate test2=new Outstate ("May","Anderson",17,false);
+//    	test2.tuitionDue();
+//    	System.out.println(test2.toString());
+//    	Outstate test3=new Outstate ("John","White",12,true);
+//    	test.tuitionDue();
+//    	System.out.println(test.toString());
+//    	System.out.println(test.compareTo(test3));
+
+		//test checkTestCases(String,String)
+		// input: "20" and "20", expected output: pass
+		checkTestCases(String.valueOf(20),"20");
+		//input: "hello" and "bye", expected output: fail
+		checkTestCases("hello","bye");
+
+		String expected; //string used to set expected string values for checkTestCases()
+
+		// test toString()
+		//input: fname: Out lname: State credit: 20 tristate: true
+		//expected output: Out State\nCredit: 20\nStatus: Outstate\nTristateArea: Yes
+		Outstate checkConstructorAndtoString = new Outstate("Out","State",20,true);
+		expected = "Out State:\nCredit: 20\nStatus: Outstate\nTristateArea: Yes";
+		checkTestCases(checkConstructorAndtoString.toString(),expected);
+
+		//test constructor Outstate(String fname, String lname, int credit, boolean tristate)
+		//input: fname: Out lname: State credit: 20 tristate: true ; will use object created for toString() test
+		//expected output: Out State\nCredit: 20\nStatus: Outstate\nTristateArea: Yes
+		expected = "Out State:\nCredit: 20\nStatus: Outstate\nTristateArea: Yes";
+		checkTestCases(checkConstructorAndtoString.toString(),expected);
+		//input: fname: Non lname: Tristate credit: 14 tristate: false
+		//expected output: Non Tristate:\nCredit: 14\nStatus: Outstate\nTristateArea: No
+		Outstate nonTristateCheck = new Outstate("Non","Tristate",14,false);
+		expected = "Non Tristate:\nCredit: 14\nStatus: Outstate\nTristateArea: No";
+		checkTestCases(nonTristateCheck.toString(),expected);
+
+		//test tuitionDue() for Outstate
+		Outstate nonTristatePartTime = new Outstate("Jim","Bob",6,false);
+		Outstate nonTristateFullTime = new Outstate("Bob","Jim",14,false);
+		Outstate nonTristateOverFifteen = new Outstate("Jay","Barry",19,false);
+		Outstate tristatePartTime = new Outstate("Hello","Bye",6,true);
+		Outstate tristateFullTime = new Outstate("Bye","Hello",14,true);
+		Outstate tristateOverFifteen = new Outstate("Rizwan","Chowdhury",18,true);
+		Outstate atFullTimeThreshold = new Outstate("Riz","Chow",12,true);
+		Outstate atFullTimeThresholdNonTristate = new Outstate("Tin","Fung",12,false);
+		//input: nonTristatePartTime =  fname: “Jim” lname: “Bob” credit: 6 tristate: false
+		//expected output: 5382
+		checkTestCases(Integer.toString(nonTristatePartTime.tuitionDue()),"5382");
+		//input: nonTristateFullTime = Bob Jim credit:14,tristate:false
+		//expected output: 12025
+		checkTestCases(Integer.toString(nonTristateFullTime.tuitionDue()),"12025");
+		//input: nonTristateOverFifteen = Jay Barry credit:19,tristate:false
+		//expected output: 12781
+		checkTestCases(Integer.toString(nonTristateOverFifteen.tuitionDue()),"12781");
+		//input: tristatePartTime = Hello Bye credit: 6, tristate: true
+		//expected output: 5382
+		checkTestCases(Integer.toString(tristatePartTime.tuitionDue()),"5382");
+		//input: tristateFullTime = Bye Hello credit:14 tristate: true
+		//expected output: 9225
+		checkTestCases(Integer.toString(tristateFullTime.tuitionDue()),"9225");
+		//input: tristateOverFifteen = Rizwan Chowdhury credit:18, tristate: true
+		//expected output: 9781
+		checkTestCases(Integer.toString(tristateOverFifteen.tuitionDue()),"9781");
+		//input: atFullTimeThreshold = Riz Chow credit:12, tristate: true
+		//expected output: 8113
+		checkTestCases(Integer.toString(atFullTimeThreshold.tuitionDue()),"8113");
+		//input: atFullTimeThresholdNonTristate = Tin Fung credit:12, tristate: false
+		//expected output: 10513
+		checkTestCases(Integer.toString(atFullTimeThresholdNonTristate.tuitionDue()),"10513");
+
     }
+
+
+	/**
+	 Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
+	 Prints pass if test cases matches expected or fail if test case does not match.
+	 @param methodResult
+	 @param expected
+	 */
+	private static void checkTestCases(String methodResult, String expected){
+		boolean pass = expected.equals(methodResult);
+		String statusString = (pass) ? "pass":"fail";
+		System.out.println("-New Case:");
+		System.out.println("--Status: " + statusString);
+		System.out.println("--MethodResult:\n" + methodResult);
+		System.out.println("--Expected:\n" + expected);
+		System.out.println("\n");
+	}
 }

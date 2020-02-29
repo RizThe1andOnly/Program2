@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +40,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaFXIntro" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
-  <component name="RunManager" selected="Application.Instate">
+  <component name="RunManager" selected="Application.Outstate">
     <configuration name="Instate" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Instate" />
+      <module name="Program2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Outstate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Outstate" />
       <module name="Program2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -58,6 +65,7 @@
     <list>
       <item itemvalue="Application.Prog2" />
       <item itemvalue="Application.Instate" />
+      <item itemvalue="Application.Outstate" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -74,38 +82,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582947237986">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582954079487">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582947237986" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582954079487" />
     <state x="829" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1582397307765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="829" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582397307765" />
-    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582947225665">
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582954076791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1582947225665" />
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1582954076791" />
     <state x="647" y="99" key="FileChooserDialogImpl" timestamp="1582917309294">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="647" y="99" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582917309294" />
-    <state width="639" height="179" key="GridCell.Tab.0.bottom" timestamp="1582953809943">
+    <state width="639" height="179" key="GridCell.Tab.0.bottom" timestamp="1582960483613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582953809943" />
-    <state width="639" height="179" key="GridCell.Tab.0.center" timestamp="1582953809943">
+    <state width="639" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582960483613" />
+    <state width="639" height="179" key="GridCell.Tab.0.center" timestamp="1582960483612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582953809943" />
-    <state width="639" height="179" key="GridCell.Tab.0.left" timestamp="1582953809943">
+    <state width="639" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582960483612" />
+    <state width="639" height="179" key="GridCell.Tab.0.left" timestamp="1582960483612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582953809943" />
-    <state width="639" height="179" key="GridCell.Tab.0.right" timestamp="1582953809943">
+    <state width="639" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582960483612" />
+    <state width="639" height="179" key="GridCell.Tab.0.right" timestamp="1582960483613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582953809943" />
+    <state width="639" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582960483613" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582915068078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
