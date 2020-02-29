@@ -94,13 +94,90 @@ public class International extends Student {
      @author Tin Fung
      */
     public static void main(String[] args){
-    	International test=new International ("Joe","Kim",12,true);
-    	test.tuitionDue();
-    	System.out.println(test.toString());
-    	
-    	International test2=new International ("David","Lee",12,false);
-    	test2.tuitionDue();
-    	System.out.println(test2.toString());
 
+		//test checkTestCases(String,String)
+		// input: "20" and "20", expected output: pass
+		checkTestCases(String.valueOf(20),"20");
+		//input: "hello" and "bye", expected output: fail
+		checkTestCases("hello","bye");
+
+		String expected; //string used to set expected string values for checkTestCases()
+
+		//check toString()
+		//input: fname: United , lname: Kingdom, credit: 13, exchange: true
+		//expected output: United Kingdom:\nCredit: 13\nStatus: International\nExchange:Yes
+		International checkToString = new International("United","Kingdom",13,true);
+		expected = "United Kingdom:\nCredit: 13\nStatus: International\nExchange: Yes";
+		checkTestCases(checkToString.toString(),expected);
+
+		//check constructor International()
+		//input: fname: Aus, lname: Tralia, credits: 14, exchange: true
+		//expected output: Aus Tralia:\nCredit: 14\nStatus: International\nExchange: Yes
+		International checkConstructor1 = new International("Aus","Tralia",14,true);
+		expected = "Aus Tralia:\nCredit: 14\nStatus: International\nExchange: Yes";
+		checkTestCases(checkConstructor1.toString(),expected);
+		//input: fname: Colom, lname: Bia, credit: 13, exhcange: false
+		International checkConstructor2 = new International("Colom","Bia",13,false);
+		expected = "Colom Bia:\nCredit: 13\nStatus: International\nExchange: No";
+		checkTestCases(checkConstructor2.toString(),expected);
+
+		//check tuitionDue()
+		International exchangePartTime = new International("South","Africa",10,true);
+		International exchangeAtTwelveCredits = new International("Chi","Na",12,true);
+		International exchangeFullTime = new International("Ja","Pan",14,true);
+		International exchangeBeyondFifteenCredit = new International("Fr","Ance",20,true);
+		International nonExchangePartTime = new International("Ca","Nada",10,false);
+		International nonExchangeAtTwelveCredits = new International("Bangla","Desh",12,false);
+		International nonExchangeFullTime = new International("Mex","Ico",14,false);
+		International nonExchangeBeyondFifteenCredit = new International("Ger","Many",19,false);
+		//input: exchangePartTime = fname:South, lname: Africa, credit: 10, exchange: true
+		//exepcted output: 1791
+		expected = "1791";
+		checkTestCases(Integer.toString(exchangePartTime.tuitionDue()),expected);
+		//input: exchangeAtTwelveCredits = fname: Chi, lname: Na, credit:12,exchange:true
+		//expected output: 1791
+		expected = "1791";
+		checkTestCases(Integer.toString(exchangeAtTwelveCredits.tuitionDue()),expected);
+		//input: exchangeFullTime = fname: Ja, lname: Pan, credits: 14, exchange: true
+		//expected output: 1791
+		expected = "1791";
+		checkTestCases(Integer.toString(exchangeFullTime.tuitionDue()),expected);
+		//input: exchangeBeyondFifteenCredit = fname: Fr, lname: ance, credit: 20, exchange: true
+		//expected output: 1791
+		expected = "1791";
+		checkTestCases(Integer.toString(exchangeBeyondFifteenCredit.tuitionDue()),expected);
+		//input: nonExchangePartTime = fname: Ca, lname: Nada, credit: 10, exchange: false
+		//expected output: 10646
+		expected = "10646";
+		checkTestCases(Integer.toString(nonExchangePartTime.tuitionDue()),expected);
+		//input: nonExchangeAtTwelveCredits = fname: Bangla, lname: Desh, credits: 12, exchange: false
+		//expected output: 13131
+		expected = "13131";
+		checkTestCases(Integer.toString(nonExchangeAtTwelveCredits.tuitionDue()),expected);
+		//input: nonExchangeFullTime = fname: Mex, lname: Ico, credit: 14, exchange: false
+		//expected output: 15021
+		expected = "15021";
+		checkTestCases(Integer.toString(nonExchangeFullTime.tuitionDue()),expected);
+		//input: nonExchangeBeyondFifteenCredit = fname: Ger, lname: Many, credits: 19, exchange: false
+		//expected output: 15966
+		expected = "15966";
+		checkTestCases(Integer.toString(nonExchangeBeyondFifteenCredit.tuitionDue()),expected);
     }
+
+
+	/**
+	 Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
+	 Prints pass if test cases matches expected or fail if test case does not match.
+	 @param methodResult
+	 @param expected
+	 */
+	private static void checkTestCases(String methodResult, String expected){
+		boolean pass = expected.equals(methodResult);
+		String statusString = (pass) ? "pass":"fail";
+		System.out.println("-New Case:");
+		System.out.println("--Status: " + statusString);
+		System.out.println("--MethodResult:\n" + methodResult);
+		System.out.println("--Expected:\n" + expected);
+		System.out.println("\n");
+	}
 }

@@ -101,16 +101,6 @@ public class Outstate extends Student {
      @author Tin Fung
      */
     public static void main(String[] args){
-//    	Outstate test=new Outstate ("John","White",12,true);
-//    	test.tuitionDue();
-//    	System.out.println(test.toString());
-//    	Outstate test2=new Outstate ("May","Anderson",17,false);
-//    	test2.tuitionDue();
-//    	System.out.println(test2.toString());
-//    	Outstate test3=new Outstate ("John","White",12,true);
-//    	test.tuitionDue();
-//    	System.out.println(test.toString());
-//    	System.out.println(test.compareTo(test3));
 
 		//test checkTestCases(String,String)
 		// input: "20" and "20", expected output: pass
