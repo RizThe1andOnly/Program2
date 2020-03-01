@@ -92,6 +92,7 @@ public class International extends Student {
      @param args arguments passed into the testbed main class
 
      @author Tin Fung
+	 @author Rizwan Chowdhury
      */
     public static void main(String[] args){
 
@@ -170,6 +171,8 @@ public class International extends Student {
 	 Prints pass if test cases matches expected or fail if test case does not match.
 	 @param methodResult
 	 @param expected
+
+	 @author Rizwan Chowdhury
 	 */
 	private static void checkTestCases(String methodResult, String expected){
 		boolean pass = expected.equals(methodResult);

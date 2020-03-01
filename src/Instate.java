@@ -147,6 +147,8 @@ public class Instate extends Student {
      Prints pass if test cases matches expected or fail if test case does not match.
      @param methodResult
      @param expected
+
+     @author Rizwan Chowdhury
      */
     private static void checkTestCases(String methodResult, String expected){
         boolean pass = expected.equals(methodResult);

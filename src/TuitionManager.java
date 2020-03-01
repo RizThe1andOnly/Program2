@@ -154,6 +154,8 @@ public class TuitionManager {
      @param lastName Student's last name
      @param credits number of credits the student is taking
      @param tristateString String represantion of wheter student lives in tristate area or not, type-specific data
+
+     @author Rizwan Chowdhury
      */
     private void addNewOutstateStudent(String firstName, String lastName, int credits, String tristateString){
 

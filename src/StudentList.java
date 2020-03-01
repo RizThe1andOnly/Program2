@@ -55,6 +55,11 @@ public class StudentList {
 	}
 
 
+	/**
+	 Checks whether the list is empty.
+	 @return true if list is empty, false if it is not
+	 @author Rizwan Chowhdury
+	 */
 	public boolean isEmpty(){
 		if(this.numberOfStudents==0){
 			return true;
