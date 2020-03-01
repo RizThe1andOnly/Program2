@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prog2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prog2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
