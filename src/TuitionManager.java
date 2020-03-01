@@ -23,6 +23,9 @@ public class TuitionManager {
     private final int STUDENT_INFO_POSITION = 1;
     private final int INTERNATIONAL_STUDENT_CREDIT_REQUIREMENT = 9;
     private final int MINIMUM_CREDIT_ALLOWED = 1;
+    private final int NUMBER_OF_PROPER_INPUTS_FOR_ADD = 4;
+    private final int NUMBRER_OF_PROPER_INPUTS_FOR_REMOVE = 2;
+    private final int COMMAND_LENGTH_LIMIT_FOR_P_AND_Q = 1;
 
     /**
      method that will be called to run the project.
@@ -46,6 +49,7 @@ public class TuitionManager {
             command = inputLine[COMMAND_POSITION];
             if(command.length()!=COMMAND_LENGTH){
                 handleBadCommands("Input does not match format");
+                continue;
             }
             switch (command.charAt(0)){
                 //cases based on required inputs:
@@ -57,10 +61,20 @@ public class TuitionManager {
                 break;
                 case 'R': removeStudent(inputLine[STUDENT_INFO_POSITION]);
                 break;
-                case 'P': printCommand();
+                case 'P': if(inputLine.length>COMMAND_LENGTH_LIMIT_FOR_P_AND_Q){
+                              handleBadCommands("Input does not match format");
+                          }
+                          else{
+                              printCommand();
+                          }
                 break;
-                case 'Q': System.out.println("Program Terminated");
-                          loop = false;
+                case 'Q': if(inputLine.length>COMMAND_LENGTH_LIMIT_FOR_P_AND_Q){
+                              handleBadCommands("Input does not match format");
+                          }
+                          else{
+                              System.out.println("Program Terminated");
+                              loop = false;
+                          }
                 break;
                 default : handleBadCommands("\'"+command.charAt(0)+"\'"+" is not a proper command");
             }
@@ -79,6 +93,11 @@ public class TuitionManager {
      */
     private void addNewStudent(char studentType, String studentDetails){
         String[] studentInfo = studentDetails.split(" ");
+
+        if(studentInfo.length != NUMBER_OF_PROPER_INPUTS_FOR_ADD){
+            handleBadCommands("Input does not match format");
+            return;
+        }
 
         String firstName = studentInfo[FIRST_NAME_POSITION];
         String lastName = studentInfo[LAST_NAME_POSITION];
@@ -119,6 +138,7 @@ public class TuitionManager {
         Student newInstateStudent = new Instate(firstName,lastName,credits,funds);
         if(!(students.contains(newInstateStudent))){
             students.add(newInstateStudent);
+            System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
             System.out.print("Student already in students list. Could not add Student");
@@ -150,6 +170,7 @@ public class TuitionManager {
         Student newOutstateStudent = new Outstate(firstName,lastName,credits,tristate);
         if(!(students.contains(newOutstateStudent))){
             students.add(newOutstateStudent);
+            System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
             System.out.print("Student already in students list. Could not add student");
@@ -186,6 +207,7 @@ public class TuitionManager {
         Student newInternationalStudent = new International(firstName,lastName,credits,exchange);
         if(!(students.contains(newInternationalStudent))){
             students.add(newInternationalStudent);
+            System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
             System.out.print("Student already in students list. ");
@@ -222,6 +244,11 @@ public class TuitionManager {
     private void removeStudent(String studentInfo){
         String[] studentDetails = studentInfo.split(" ");
 
+        if(studentDetails.length != NUMBRER_OF_PROPER_INPUTS_FOR_REMOVE){
+            handleBadCommands("Input does not match format");
+            return;
+        }
+
         String firstName = studentDetails[FIRST_NAME_POSITION];
         String lastName = studentDetails[LAST_NAME_POSITION];
         Student studentToBeRemoved = new Instate(firstName,lastName,0,0);
@@ -229,6 +256,9 @@ public class TuitionManager {
         boolean successfulRemoval = students.remove(studentToBeRemoved);
         if(successfulRemoval == false){
             System.out.println("Failed to remove Student");
+        }
+        else{
+            System.out.println("Removed student: " + firstName + " " + lastName);
         }
     }
 
@@ -251,6 +281,12 @@ public class TuitionManager {
      * @author Tin Fung
      */
     private void printCommand(){
+
+        if(students.isEmpty()){
+            System.out.println("--Empty List--");
+            return;
+        }
+
         students.print();
         System.out.println("--End of List--");
     }

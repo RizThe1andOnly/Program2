@@ -55,6 +55,14 @@ public class StudentList {
 	}
 
 
+	public boolean isEmpty(){
+		if(this.numberOfStudents==0){
+			return true;
+		}
+		return false;
+	}
+
+
 	/**
 	 Grows the array when its capacity is reached.
 
@@ -116,6 +124,7 @@ public class StudentList {
      @author Tin Fung
      */
     public void print(){
+
     	for(int i=0;i<this.numberOfStudents;i++) {
     		System.out.println(this.studentList[i].toString());
     		System.out.println("Tuition Due: " + this.studentList[i].tuitionDue());

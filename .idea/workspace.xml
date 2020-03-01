@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaFXIntro" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
-  <component name="RunManager" selected="Application.International">
+  <component name="RunManager" selected="Application.Prog2">
     <configuration name="Instate" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Instate" />
       <module name="Program2" />
@@ -107,22 +107,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="647" y="99" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582917309294" />
-    <state width="639" height="179" key="GridCell.Tab.0.bottom" timestamp="1583012628210">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583026240656">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583012628210" />
-    <state width="639" height="179" key="GridCell.Tab.0.center" timestamp="1583012628208">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583026240656" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583026240655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583012628208" />
-    <state width="639" height="179" key="GridCell.Tab.0.left" timestamp="1583012628207">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583026240655" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583026240655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583012628207" />
-    <state width="639" height="179" key="GridCell.Tab.0.right" timestamp="1583012628209">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583026240655" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583026240656">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="639" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583012628209" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583026240656" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582915068078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
