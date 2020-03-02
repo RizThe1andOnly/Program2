@@ -169,8 +169,8 @@ public class International extends Student {
 	/**
 	 Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
 	 Prints pass if test cases matches expected or fail if test case does not match.
-	 @param methodResult
-	 @param expected
+	 @param methodResult value returned from method being tested, method output
+	 @param expected value of expected output
 
 	 @author Rizwan Chowdhury
 	 */

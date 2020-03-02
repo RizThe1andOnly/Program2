@@ -46,7 +46,6 @@ public class Outstate extends Student {
 
      @return int, the amount of tuition the student has to pay
 
-     @author Rizwan Chowdhury
      @author Tin Fung
      */
     @Override
@@ -138,7 +137,7 @@ public class Outstate extends Student {
 		Outstate tristateOverFifteen = new Outstate("Rizwan","Chowdhury",18,true);
 		Outstate atFullTimeThreshold = new Outstate("Riz","Chow",12,true);
 		Outstate atFullTimeThresholdNonTristate = new Outstate("Tin","Fung",12,false);
-		//input: nonTristatePartTime =  fname: “Jim” lname: “Bob” credit: 6 tristate: false
+		//input: nonTristatePartTime =  fname: "Jim" lname: "Bob" credit: 6 tristate: false
 		//expected output: 5382
 		checkTestCases(Integer.toString(nonTristatePartTime.tuitionDue()),"5382");
 		//input: nonTristateFullTime = Bob Jim credit:14,tristate:false
@@ -169,8 +168,8 @@ public class Outstate extends Student {
 	/**
 	 Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
 	 Prints pass if test cases matches expected or fail if test case does not match.
-	 @param methodResult
-	 @param expected
+	 @param methodResult value returned from method being tested, method output
+	 @param expected value of expected output
 
 	 @author Rizwan Chowdhury
 	 */

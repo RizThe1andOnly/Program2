@@ -85,12 +85,7 @@ public class Instate extends Student {
      @author Rizwan Chowdhury
      @author Tin Fung
      */
-    public static void main(String[] args){ 
-    	
-//    	Instate test=new Instate ("John","white",12,1000);
-//    	test.tuitionDue();
-//    	System.out.println(test.toString());
-
+    public static void main(String[] args){
     	//test checkTestCases(String,String)
         // input: "20" and "20", expected output: pass
         checkTestCases(String.valueOf(20),"20");
@@ -145,8 +140,8 @@ public class Instate extends Student {
     /**
      Checks if the test cases pass/fail by comparing String versions of the result returned and expected output.
      Prints pass if test cases matches expected or fail if test case does not match.
-     @param methodResult
-     @param expected
+     @param methodResult value returned from method being tested, method output
+     @param expected value of expected output
 
      @author Rizwan Chowdhury
      */

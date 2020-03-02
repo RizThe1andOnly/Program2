@@ -7,7 +7,8 @@ public class Prog2 {
 
     /**
      * main method that will run the entire program when it itself is run.
-     * @param args
+     * @param args arguments for the main method
+     * @author Rizwan Chowdhury
      */
     public static void main(String[] args) {
         new TuitionManager().run();

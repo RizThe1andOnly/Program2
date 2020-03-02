@@ -26,6 +26,7 @@ public class TuitionManager {
     private final int NUMBER_OF_PROPER_INPUTS_FOR_ADD = 4;
     private final int NUMBRER_OF_PROPER_INPUTS_FOR_REMOVE = 2;
     private final int COMMAND_LENGTH_LIMIT_FOR_P_AND_Q = 1;
+    private final int MINIMUM_FUNDING_ALLOWED = 0;
 
     /**
      method that will be called to run the project.
@@ -135,6 +136,11 @@ public class TuitionManager {
 
         int funds = Integer.parseInt(fundString);
 
+        if(funds<MINIMUM_FUNDING_ALLOWED){
+            System.out.println("Funds has to be greater than or equal to 0. Could not add student.");
+            return;
+        }
+
         Student newInstateStudent = new Instate(firstName,lastName,credits,funds);
         if(!(students.contains(newInstateStudent))){
             students.add(newInstateStudent);
@@ -239,6 +245,7 @@ public class TuitionManager {
 
     /**
      Removes given student from the running list in this class
+     @param studentInfo Student's first and last names as a string
 
      @author Rizwan Chowdhury
      @author Tin Fung
@@ -267,7 +274,7 @@ public class TuitionManager {
 
     /**
      Handles bad commands inputted into the command line.
-
+     @param command identifier for certain bad commands, if they are lower case for example
      @author Rizwan Chowdhury
      @author Tin Fung
      */

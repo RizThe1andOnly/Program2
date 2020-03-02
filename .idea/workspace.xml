@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a43be9ac-95a0-4cd8-b802-c8e87033f436" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OtherSubmissions/Program2UMLDiagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OtherSubmissions/TesetCase Documents.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OtherSubmissions/TestCaseDocuments(PDF).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/Instate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/Instate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/International.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/International.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/Outstate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/Outstate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/Prog2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/Prog2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/StudentList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/StudentList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Program2/TuitionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Program2/TuitionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Instate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/International.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/International.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Outstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outstate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prog2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prog2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TuitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TuitionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +53,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaFXIntro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rizwan\IdeaProjects\Program2\src\OtherSubmissions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rizwan\IdeaProjects\Program2\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Prog2">
     <configuration name="Instate" type="Application" factoryName="Application">
@@ -101,26 +126,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1583006289235" />
-    <state x="647" y="99" key="FileChooserDialogImpl" timestamp="1582917309294">
+    <state x="430" y="96" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583113197784">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="647" y="99" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582917309294" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583027612784">
+    <state x="430" y="96" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583113197784" />
+    <state x="647" y="99" key="FileChooserDialogImpl" timestamp="1583113196516">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583027612784" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583027612784">
+    <state x="647" y="99" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583113196516" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583113197873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583027612784" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583027612784">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583113197873" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583113197873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583027612784" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583027612784">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583113197873" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583113197872">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583027612784" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583113197872" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583113197873">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583113197873" />
     <state x="368" y="0" key="SettingsEditor" timestamp="1582915068078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -129,10 +158,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="665" y="136" width="540" height="524" key="StructurePopup/0.0.1366.728@0.0.1366.728" timestamp="1582752703531" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582946203662">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1583108597497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582946203662" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583108597497" />
     <state x="0" y="23" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582678147507" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1582397647036">
       <screen x="0" y="0" width="1366" height="728" />

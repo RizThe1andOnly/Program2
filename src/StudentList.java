@@ -87,7 +87,6 @@ public class StudentList {
     /**
      Adds Student object provided through argument into this container.
      @param s Student object to be added
-     @author Rizwan Chowdhury
      @author Tin Fung
      */
     public void add(Student s){
