@@ -147,7 +147,7 @@ public class TuitionManager {
             System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
-            System.out.print("Student already in students list. Could not add Student");
+            System.out.println("Student already in students list. Could not add Student");
         }
     }
 
@@ -181,7 +181,7 @@ public class TuitionManager {
             System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
-            System.out.print("Student already in students list. Could not add student");
+            System.out.println("Student already in students list. Could not add student");
         }
     }
 
@@ -218,7 +218,7 @@ public class TuitionManager {
             System.out.println("Added new student: " + firstName + " " + lastName);
         }
         else{
-            System.out.print("Student already in students list. ");
+            System.out.println("Student already in students list. ");
         }
     }
 
